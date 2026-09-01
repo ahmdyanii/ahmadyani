@@ -717,187 +717,249 @@
     </section>
 
 
-    <!-- =========================
-         KONTAK
-    ========================== -->
-    <section id="kontak" class="section">
+<!-- =========================
+     KONTAK
+========================== -->
+<section id="kontak" class="section">
 
-        <div class="container">
+    <div class="container">
 
-            <div class="contact-wrapper">
+        <div class="contact-wrapper">
 
-                <!-- BAGIAN KIRI -->
-                <div class="contact-left">
+            <!-- BAGIAN KIRI -->
+            <div class="contact-left">
 
-                    <p class="section-label">
-                        KONTAK
-                    </p>
+                <p class="section-label">
+                    KONTAK
+                </p>
 
-                    <h2>
-                        Mari
-                        <span>Terhubung</span>
-                    </h2>
+                <h2>
+                    Mari
+                    <span>Terhubung</span>
+                </h2>
 
-                    <p>
-                        Saya terbuka untuk berdiskusi mengenai
-                        programming, networking, teknologi,
-                        maupun pengembangan project.
-                        Jangan ragu untuk menghubungi saya
-                        melalui kontak yang tersedia.
-                    </p>
+                <p>
+                    Saya terbuka untuk berdiskusi mengenai
+                    programming, networking, teknologi,
+                    maupun pengembangan project.
+                    Jangan ragu untuk menghubungi saya
+                    melalui kontak yang tersedia.
+                </p>
 
 
-                    <div class="contact-list">
+                <div class="contact-list">
 
-                        <!-- EMAIL -->
-                        <div class="contact-item">
+                    <!-- EMAIL -->
+                    <div class="contact-item">
 
-                            <span>@</span>
+                        <span>@</span>
 
-                            <div>
-                                <small>Email</small>
+                        <div>
+                            <small>Email</small>
 
-                                <!-- GANTI EMAIL -->
-                                <strong>
-                                    ahmadyani050527@gmail.com
-                                </strong>
-                            </div>
-
+                            <strong>
+                                ahmadyani050527@gmail.com
+                            </strong>
                         </div>
 
+                    </div>
 
-                        <!-- INSTAGRAM -->
-                        <div class="contact-item">
 
-                            <span>IG</span>
+                    <!-- INSTAGRAM -->
+                    <div class="contact-item">
 
-                            <div>
-                                <small>Instagram</small>
+                        <span>IG</span>
 
-                                <!-- GANTI INSTAGRAM -->
-                                <strong>
-                                    @_ahmad275
-                                </strong>
-                            </div>
+                        <div>
+                            <small>Instagram</small>
 
+                            <strong>
+                                @_ahmad275
+                            </strong>
                         </div>
 
+                    </div>
 
-                        <!-- GITHUB -->
-                        <div class="contact-item">
 
-                            <span>GH</span>
+                    <!-- GITHUB -->
+                    <div class="contact-item">
 
-                            <div>
-                                <small>GitHub</small>
+                        <span>GH</span>
 
-                                <!-- GANTI GITHUB -->
-                                <strong>
-                                    ahmadyani050507-crypto.github.io
-                                </strong>
-                            </div>
+                        <div>
+                            <small>GitHub</small>
 
+                            <strong>
+                                ahmadyani050507-crypto.github.io
+                            </strong>
                         </div>
 
                     </div>
 
                 </div>
 
-
-                <!-- BAGIAN KANAN -->
-                <form class="contact-form">
-
-                    <div class="form-group">
-
-                        <label for="nama">
-                            Nama
-                        </label>
-
-                        <input
-                            type="text"
-                            id="nama"
-                            name="nama"
-                            placeholder="Masukkan nama Anda"
-                            required
-                        >
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="email">
-                            Email
-                        </label>
-
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="Masukkan email Anda"
-                            required
-                        >
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="pesan">
-                            Pesan
-                        </label>
-
-                        <textarea
-                            id="pesan"
-                            name="pesan"
-                            rows="5"
-                            placeholder="Tuliskan pesan Anda..."
-                            required
-                        ></textarea>
-
-                    </div>
-
-
-                    <button
-                        type="button"
-                        class="send-button"
-                    >
-                        Kirim Pesan
-                        <span>→</span>
-                    </button>
-
-                </form>
-
             </div>
 
+
+            <!-- BAGIAN KANAN -->
+            <form class="contact-form" id="contactForm">
+
+                <div class="form-group">
+
+                    <label for="nama">
+                        Nama
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nama"
+                        name="nama"
+                        placeholder="Masukkan nama Anda"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Masukkan email Anda"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="pesan">
+                        Pesan
+                    </label>
+
+                    <textarea
+                        id="pesan"
+                        name="pesan"
+                        rows="5"
+                        placeholder="Tuliskan pesan Anda..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="send-button"
+                    onclick="kirimEmail()"
+                >
+                    Kirim Pesan
+                    <span>→</span>
+                </button>
+
+            </form>
+
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
-    <footer>
+<!-- =========================
+     FOOTER
+========================== -->
+<footer>
 
-        <div class="container footer-content">
+    <div class="container footer-content">
 
-            <h3>
-                Ahmad Yani
-            </h3>
+        <h3>
+            Ahmad Yani
+        </h3>
 
-            <p>
-                © 2026 Portofolio • Pemrograman Web
-            </p>
+        <p>
+            © 2026 Portofolio • Pemrograman Web
+        </p>
 
-            <a href="#home">
-                Kembali ke Atas ↑
-            </a>
+        <a href="#home">
+            Kembali ke Atas ↑
+        </a>
 
-        </div>
+    </div>
 
-    </footer>
+</footer>
+
+
+<!-- =========================
+     SCRIPT KIRIM EMAIL
+========================== -->
+<script>
+
+function kirimEmail() {
+
+    const nama =
+        document.getElementById("nama").value.trim();
+
+    const email =
+        document.getElementById("email").value.trim();
+
+    const pesan =
+        document.getElementById("pesan").value.trim();
+
+
+    if (nama === "" || email === "" || pesan === "") {
+
+        alert(
+            "Silakan isi nama, email, dan pesan terlebih dahulu."
+        );
+
+        return;
+    }
+
+
+    const emailTujuan =
+        "ahmadyani050527@gmail.com";
+
+
+    const subject =
+        "Pesan Portofolio dari " + nama;
+
+
+    const body =
+        "Halo Ahmad Yani,\n\n" +
+
+        "Saya menghubungi Anda melalui website portofolio.\n\n" +
+
+        "Nama: " + nama + "\n" +
+
+        "Email: " + email + "\n\n" +
+
+        "Pesan:\n" + pesan + "\n\n" +
+
+        "Terima kasih.";
+
+
+    const mailto =
+        "mailto:" + emailTujuan +
+
+        "?subject=" +
+        encodeURIComponent(subject) +
+
+        "&body=" +
+        encodeURIComponent(body);
+
+
+    window.location.href = mailto;
+}
+
+</script>
 
 </body>
-
 </html>
