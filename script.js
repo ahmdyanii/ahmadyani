@@ -7,49 +7,112 @@ const menu = document.getElementById("menu");
 const dropdown = document.querySelector(".dropdown");
 const dropdownLink = document.querySelector(".dropdown > a");
 
-// Buka / tutup menu
-menuToggle.addEventListener("click", function () {
 
-    menu.classList.toggle("active");
-    menuToggle.classList.toggle("active");
+// BUKA / TUTUP MENU
+if (menuToggle && menu) {
 
-    const terbuka = menu.classList.contains("active");
+    menuToggle.addEventListener("click", function () {
 
-    menuToggle.setAttribute(
-        "aria-expanded",
-        terbuka
-    );
-});
+        menu.classList.toggle("active");
+
+        menuToggle.classList.toggle("active");
 
 
-// Dropdown Portofolio di HP
-dropdownLink.addEventListener("click", function (event) {
-
-    if (window.innerWidth <= 950) {
-
-        event.preventDefault();
-
-        dropdown.classList.toggle("open");
-    }
-});
+        const terbuka =
+            menu.classList.contains("active");
 
 
-// Tutup menu setelah memilih menu
-document.querySelectorAll(".dropdown-menu a, #menu > li:not(.dropdown) > a")
-.forEach(function (link) {
+        menuToggle.setAttribute(
+            "aria-expanded",
+            terbuka ? "true" : "false"
+        );
 
-    link.addEventListener("click", function () {
+    });
+
+}
+
+
+// DROPDOWN PORTOFOLIO DI HP
+if (dropdown && dropdownLink) {
+
+    dropdownLink.addEventListener("click", function (event) {
 
         if (window.innerWidth <= 950) {
 
-            menu.classList.remove("active");
-            menuToggle.classList.remove("active");
+            event.preventDefault();
+
+            dropdown.classList.toggle("open");
+
+        }
+
+    });
+
+}
+
+
+// TUTUP MENU SETELAH MENU DIPILIH
+document
+    .querySelectorAll(
+        ".dropdown-menu a, #menu > li:not(.dropdown) > a"
+    )
+    .forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            if (
+                window.innerWidth <= 950 &&
+                menu &&
+                menuToggle
+            ) {
+
+                menu.classList.remove("active");
+
+                menuToggle.classList.remove("active");
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+
+                if (dropdown) {
+
+                    dropdown.classList.remove("open");
+
+                }
+
+            }
+
+        });
+
+    });
+
+
+// RESET MENU SAAT UKURAN LAYAR DIPERBESAR
+window.addEventListener("resize", function () {
+
+    if (
+        window.innerWidth > 950 &&
+        menu &&
+        menuToggle
+    ) {
+
+        menu.classList.remove("active");
+
+        menuToggle.classList.remove("active");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+
+        if (dropdown) {
+
             dropdown.classList.remove("open");
 
-            menuToggle.setAttribute(
-                "aria-expanded",
-                "false"
-            );
         }
-    });
+
+    }
+
 });
