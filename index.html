@@ -118,9 +118,7 @@
                     <span>Yani</span>
                 </h1>
 
-                <h2>
-                    Mahasiswa Teknik Komputer
-                </h2>
+                <h2 id="typing-text">Mahasiswa Teknik Komputer</h2>
 
                 <p class="hero-description">
                     Saya memiliki ketertarikan dalam bidang programming,
@@ -464,51 +462,48 @@
 
             <div class="project-grid">
 
-                <!-- =========================
-                     PROJECT 01
-                ========================== -->
- <!-- =========================
-     PROJECT 03
-========================== -->
-<article class="project-card">
+            <!-- =========================
+                PROJECT 01
+            ========================== -->
+            <article class="project-card">
 
-    <div class="project-image">
+                <div class="project-image">
 
-        <img
-            src="img/project1.jpg"
-            alt="Laundry Management System"
-        >
+                    <img
+                        src="img/project1.jpg"
+                        alt="Laundry Management System"
+                    >
 
-        <span class="project-number">
-            01
-        </span>
+                    <span class="project-number">
+                        01
+                    </span>
 
-    </div>
+                </div>
 
-    <div class="project-body">
+                <div class="project-body">
 
-        <div class="project-category">
-            WEB APPLICATION • MANAGEMENT SYSTEM
-        </div>
+                    <div class="project-category">
+                        WEB APPLICATION • MANAGEMENT SYSTEM
+                    </div>
 
-        <h3>
-            Laundry Management System
-        </h3>
+                    <h3>
+                        Laundry Management System
+                    </h3>
 
-        <p>
-            Aplikasi berbasis web untuk membantu pengelolaan
-            layanan laundry, data pelanggan, pesanan, pembayaran,
-            pengantaran, kurir, serta komplain melalui dashboard admin.
-        </p>
+                    <p>
+                        Aplikasi berbasis web untuk membantu pengelolaan
+                        layanan laundry, data pelanggan, pesanan, pembayaran,
+                        pengantaran, kurir, serta komplain melalui dashboard admin.
+                    </p>
 
-        <a href="#project">
-            Lihat Project
-            <span>→</span>
-        </a>
+                    <a href="#" onclick="bukaProject(1); return false;">
+                        Lihat Project
+                        <span>→</span>
+                    </a>
 
-    </div>
+                </div>
 
-</article>
+            </article>
 
 
                 <!-- =========================
@@ -547,7 +542,7 @@
                             statistik, visualisasi data, dan pencarian.
                         </p>
 
-                        <a href="#project">
+                        <a href="#" onclick="bukaProject(2); return false;">
                             Lihat Project
                             <span>→</span>
                         </a>
@@ -593,7 +588,7 @@
                             dalam format PDF dan Excel.
                         </p>
 
-                        <a href="#project">
+                        <a href="#" onclick="bukaProject(3); return false;">
                             Lihat Project
                             <span>→</span>
                         </a>
@@ -867,6 +862,47 @@
 
 
 <!-- =========================
+     MODAL DETAIL PROJECT
+========================== -->
+<div class="project-modal" id="projectModal" aria-hidden="true">
+
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+
+        <button
+            type="button"
+            class="modal-close"
+            onclick="tutupProject()"
+            aria-label="Tutup detail project"
+        >
+            ×
+        </button>
+
+        <img
+            id="modalImage"
+            src=""
+            alt="Detail Project"
+        >
+
+        <p
+            class="project-category"
+            id="modalCategory"
+        ></p>
+
+        <h2 id="modalTitle"></h2>
+
+        <p
+            class="modal-description"
+            id="modalDescription"
+        ></p>
+
+        <div id="modalTechnology"></div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
      SCRIPT KIRIM EMAIL
 ========================== -->
 <script>
@@ -928,7 +964,9 @@ function kirimEmail() {
     window.location.href = mailto;
 }
 
-    </script>
-    <script src="script.js"></script>
+</script>
+
+<!-- JAVASCRIPT EKSTERNAL -->
+<script src="script.js"></script>
 </body>
 </html>
